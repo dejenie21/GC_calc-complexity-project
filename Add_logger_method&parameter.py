@@ -1,3 +1,10 @@
+'''
+Created on Apr 22, 2023
+@author: Dejenie Shiferaw
+'''
+#Add a logger method to the complexity project
+#Add a parameter using parseargs that sets nmax
+
 from timeit import default_timer as timer 
 from argparse import ArgumentParser 
 from argparse import RawDescriptionHelpFormatter 
