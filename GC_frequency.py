@@ -1,3 +1,12 @@
+Created on Apr 22, 2023
+@author: Dejenie Shiferaw
+'''
+#For the GC calc project: Add a logger method and calculate GC frequency for all miRNAs for by changing speciesCode for human, mouse and rat in the argument
+''' That is:
+    -f "C:\Users\THIS-PC\AP\day4\data\mature.fa" -s hsa
+    -f "C:\Users\THIS-PC\AP\day4\data\mature.fa" -s mmu
+    -f "C:\Users\THIS-PC\AP\day4\data\mature.fa" -s rno
+ '''
 
 import json
 import sys
@@ -56,8 +65,6 @@ def initLogger(md5string):
     logging.info("project log file is <" + logfileName + ">")
     logging.info("+" + "*"*78 + "+")
     logging.debug("debug mode is on")
-
-
 
 def parseArgs(argv):
     '''parse out Command line options.'''
@@ -124,14 +131,10 @@ def calcAverageGCPercent():
     sCount = 0
     for seqLine in sequenceLines:
         seq = sequence.Sequence(headerLines[sCount], seqLine)
-
         seq.calcGC()
-
         print("for sequence <" + seq.getHeaderLine() + "> GC% is <" + str(100.0*seq.getGCPercent()) + ">")
         totalGCPercent = totalGCPercent + seq.getGCPercent()
-
     return totalGCPercent/len(sequenceLines)
-
 
 def readFastaFile(filename):
     '''
@@ -139,8 +142,7 @@ def readFastaFile(filename):
     :param self:
     :return:
     '''
-    global headerLines
-    
+    global headerLines    
     global sequenceLines
 
     # load the fasta lines into a list
