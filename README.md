@@ -1,1 +1,0 @@
-# GC_calc-complexity-project
