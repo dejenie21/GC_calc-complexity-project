@@ -1,3 +1,8 @@
+'''
+Created on Apr 22, 2023
+@author: Dejenie Shiferaw
+'''
+#For the GC calc project: Add a logger method, generate logo plots and seed sequence from miRNAs for  mouse, human and rat by changing speciesCode.
 
 import json
 import sys
@@ -7,24 +12,15 @@ import miRNA
 def readFastaFile(filename):
 
     '''
-
     load specified fasta file and store header and sequence as entries in two lists
-
     :param self:
-
     :return:
-
     '''
-
     speciesCode = "hsa" #add species code
-
     print("load sequences from fasta file <" + filename+ ">")
 
     global headerLines
-
     global sequenceLines
-
-
 
     # load the fasta lines into a list
 
@@ -40,88 +36,46 @@ def readFastaFile(filename):
 
         raise(e)
 
-
-
     headerLines = []
-
     headerLine = ""
-
     sequenceLines = []
-
     sequence = ""
 
-
-
     s = 0
-
     seqCount = 0
-
     for fastaLine in fastaLines:
-
         if fastaLine[0] == '>':
-
             seqCount +=1
-
             if s > 0 and headerLine.startswith(speciesCode):
-
                 headerLines.append(headerLine)
-
                 sequenceLines.append(sequence)
-
                 sequence = ""
-
             headerLine = fastaLine[1:].strip()
-
-            sequence = ""
-
-            
-
+            sequence = ""         
         else:
-
             sequence = sequence + fastaLine.strip()
-
         s += 1
 
     if headerLine.startswith(speciesCode):
-
         headerLines.append(headerLine)
-
         sequenceLines.append(sequence)   
-
-        
-
-    
-
+  
     print("loaded <" + str(seqCount) + "> sequences and kept <"+ str(len(headerLines)) + "> with species code [" + speciesCode + "]")
 
     return len(headerLines)        
 
-
-
 def getUniqueSeedSequences():
-
     '''
-
     get the unique seed sequences in the list of sequences loaded from the fasta file
-
     :return:
-
     '''
-
     global seedBegin
-
     global seedEnd
-
     print("get unique seed sequences from sequence list")
-
     print("seed region is defined to run from <" + str(seedBegin) + ">--><" + str(seedEnd) + ">")
-
-    
-
+ 
     uniqSeedSeqs = []
-
     seqNo = 0
-
     for seqLine in sequenceLines:
 
         miRSeq = miRNA.MiRNA(headerLines[seqNo], seqLine)
@@ -278,9 +232,6 @@ def generateLogoPlot(dfNTFrequencies):
 
     plt.savefig(outputpngfile)
     
- 
- 
- 
 from argparse import ArgumentParser
 from argparse import RawDescriptionHelpFormatter
    
@@ -355,8 +306,6 @@ def main(argv=None):
     global seedBegin
 
     global seedEnd
-
-   
 
     seedBegin = 2
 
