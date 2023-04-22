@@ -1,38 +1,40 @@
 # GC_calc-complexity-project
 
+## miRNA seed region analysis
+
+**For all species**
+* The seed region is defined to run from miRNA position <2>--><8>
+* We loaded the sequences from fasta file <C:\Users\user\AP\day6\data\mature.fa>
+* The unique seed sequences output fasta file is strored <C:\Users\user\AP\day6\data\mature__uniqseeds.fa>
+
 **Human miRNA seed region**
 
-* load sequences from fasta file <C:\Users\user\AP\day6\data\mature.fa>
-* loaded <48885> sequences and kept <2656> with species code [hsa] 
-* 2094 unique seed sequences were found
+* 48885 miRNA sequences are loaded and from this 2656 sequeces are from Homo sapiens with species code "hsa"
+* From 2656 hsa miRNA, there are 2094 unique seed sequences.
 * The unique seed sequences output fasta file is strored <C:\Users\user\AP\day6\data\mature__uniqseeds.fa>
 
 **calculate GC frequency in miRNAs of human**
 
-+ average GC % = <70.05512368618675>
-+ The number of sequences are:  2656
-+ fasta file is <C:\Users\user\AP\day6\data\mature.fa> run with speciesCode is <hsa>
-+ project log file is <C:\Users\user\AP\day8\software\complexity\logfiles\mature__20230421_153836__3697017c62772d71b4445895933026a4.log>
++ The average GC % of miRNA sequences Homo sapiens is 70.1%
++ We used the fasta file  <C:\Users\user\AP\day6\data\mature.fa> run with speciesCode is <hsa>
++ The project log file is saved at <C:\Users\user\AP\day8\software\complexity\logfiles\mature__20230421_153836__3697017c62772d71b4445895933026a4.log>
 
-## Logo plot for hsa
+## Logo plot for the hsa unique seed sequences is 
           
 ![mature__uniqseeds_logoplt](https://user-images.githubusercontent.com/87564675/233644378-5b36564f-d6d5-4b1b-be11-74cbad04889a.png)
 
 
 **Mouse miRNA seed region**
           
-+ load sequences from fasta file <C:\Users\user\AP\day6\data\mature.fa>
-+ loaded <48885> sequences and kept <1978> with species code [mmu] 
-+ get unique seed sequences from sequence list and seed region is defined to run from <2>--><8>
-+ 1588 unique seed sequences were found 
-+ The unique seed sequences output fasta file is stored  <C:\Users\user\AP\day6\data\mature__uniqseeds.fa>
-
+* 48885 miRNA sequences are loaded and from this 1978 sequeces are from mouse with species code "mmu"
+* From 1978 mouse miRNA, there are 1588 unique seed sequences.
+* The unique seed sequences output fasta file is strored <C:\Users\user\AP\day6\data\mature__uniqseeds.fa>
+          
 **calculate GC frequency in miRNAs of mouse**
           
-+ average GC % = <70.50310821391368>
-+ The number of sequences are:  1978        
-+ fasta file is <C:\Users\user\AP\day6\data\mature.fa> run with  speciesCode is <mmu>        
-+ project log file is <C:\Users\user\AP\day8\software\complexity\logfiles\mature__20230421_154730__3697017c62772d71b4445895933026a4.log>
++ The average GC % of mouse miRNA is found to be 70.5%
++ The fasta file used is <C:\Users\user\AP\day6\data\mature.fa> run with  speciesCode is <mmu>        
++ The project log file is found in <C:\Users\user\AP\day8\software\complexity\logfiles\mature__20230421_154730__3697017c62772d71b4445895933026a4.log>
 
 ##logo plot for mmu
           
@@ -41,18 +43,16 @@
 
 **Rat miRNA seed region**
 
-+ load sequences from fasta file <C:\Users\user\AP\day6\data\mature.fa>
-+ loaded <48885> sequences and kept <764> with species code [rno]
-+ get unique seed sequences from sequence list and seed region is defined to run from <2>--><8>
-+ 635 unique seed sequences were found
-+ The write unique seed sequences is found at output fasta file is <C:\Users\user\AP\day6\data\mature__uniqseeds.fa>
+* 48885 miRNA sequences are loaded and from this 764 sequeces are from rat with species code "rno"
+* From 764 rat miRNA, there are 635 unique seed sequences.
+* The unique seed sequences output fasta file is strored <C:\Users\user\AP\day6\data\mature__uniqseeds.fa>              
++ The unique seed sequences is found at output fasta file is <C:\Users\user\AP\day6\data\mature__uniqseeds.fa>
           
 **calculate GC frequency in miRNAs of rat**
 
-+ average GC % = <67.4683526671524>
-+ The number of sequences are:  764       
-+ fasta file is <C:\Users\user\AP\day6\data\mature.fa>    run with speciesCode is <rno>
-+ project log file is <C:\Users\user\AP\day8\software\complexity\logfiles\mature__20230421_154941__3697017c62772d71b4445895933026a4.log>
++ The average GC % of miRNA from rat is foind to be 67.47%      
++ The fasta file is <C:\Users\user\AP\day6\data\mature.fa>  and  run with speciesCode is <rno>
++ The project log file is stored in <C:\Users\user\AP\day8\software\complexity\logfiles\mature__20230421_154941__3697017c62772d71b4445895933026a4.log>
           
 **logo plot of rno**
           
