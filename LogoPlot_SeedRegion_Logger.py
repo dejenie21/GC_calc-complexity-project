@@ -232,7 +232,7 @@ def main(argv=None):
     seedBegin = 2
     seedEnd = 8
 
-    filename = r"C:\Users\user\AP\day6\data\five.fa"
+    filename = r"C:\Users\AdvancedProgramming\day4\data\mature.fa"
     n = readFastaFile(filename)
     print (str(n))
     uniqSeedSeqs = getUniqueSeedSequences()
@@ -249,3 +249,4 @@ def main(argv=None):
 if __name__ == '__main__':
 
     sys.exit(main())
+
